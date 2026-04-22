@@ -3,11 +3,8 @@
 int main() {
     int a,b,c;
 
-    printf("Zadejte číslo A: ");
     scanf("%d", &a);
-    printf("Zadejte číslo B: ");
     scanf("%d", &b);
-    printf("Zadejte číslo C: ");
     scanf("%d", &c);
 
     int *p_a = &a;
@@ -19,10 +16,10 @@ int main() {
 
     if (*p_a > *p_b && *p_a > *p_c) {
         maximum = *p_a;
-    } else if (*p_a > *p_b && *p_a < *p_c) {
-        maximum = *p_c;
-    } else {
+    } else if (*p_b > *p_a && *p_b > *p_c) {
         maximum = *p_b;
+    } else {
+        maximum = *p_c;
     }
 
     printf("Soucet: %d\n", soucet);
